@@ -17,7 +17,8 @@
 PROJ = TinyFPGA_BX
 
 PIN_DEF = pins.pcf
-DEVICE = lp8k
+//DEVICE = lp8k
+DEVICE = up5k
 
 all: $(PROJ).rpt $(PROJ).bin
 
@@ -25,7 +26,7 @@ all: $(PROJ).rpt $(PROJ).bin
 	yosys -p 'synth_ice40 -top $(PROJ) -blif $@' $^
 
 %.asc: $(PIN_DEF) %.blif
-	arachne-pnr -d 8k -P cm81 -o $@ -p $^
+	arachne-pnr -d 5k -P sg48 -o $@ -p $^
 
 %.bin: %.asc
 	icepack $< $@

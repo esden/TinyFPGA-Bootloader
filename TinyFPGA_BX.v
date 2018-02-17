@@ -21,9 +21,11 @@ module TinyFPGA_BX (
   ////////////////////////////////////////////////////////////////////////////////
   wire clk_48mhz;
 
-  SB_PLL40_CORE #(
+  //SB_PLL40_CORE #(
+  SB_PLL40_PAD #(
     .DIVR(4'b0000),
-    .DIVF(7'b0101111),
+    //.DIVF(7'b0101111),
+    .DIVF(7'b0111111),
     .DIVQ(3'b100),
     .FILTER_RANGE(3'b001),
     .FEEDBACK_PATH("SIMPLE"),
@@ -35,7 +37,8 @@ module TinyFPGA_BX (
     .PLLOUT_SELECT("GENCLK"),
     .ENABLE_ICEGATE(1'b0)
   ) usb_pll_inst (
-    .REFERENCECLK(pin_clk),
+    //.REFERENCECLK(pin_clk),
+    .PACKAGEPIN(pin_clk),
     .PLLOUTCORE(clk_48mhz),
     .PLLOUTGLOBAL(),
     .EXTFEEDBACK(),
@@ -65,8 +68,6 @@ module TinyFPGA_BX (
     .S0(1'b1),
     .BOOT(boot)
   );
-
-
 
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////

@@ -1,48 +1,77 @@
-###############################################################################
-# Family & Device:    iCE40LP8K
-# Package:            CM81
-###############################################################################
+# 12 MHz clock
+#set_io -nowarn CLK        35
+set_io -nowarn pin_clk    35
 
-#set_io pin_1 A2
-#set_io pin_2 A1
-#set_io pin_3 B1
-#set_io pin_4 C2
-#set_io pin_5 C1
-#set_io pin_6 D2
-#set_io pin_7 D1
-#set_io pin_8 E2
-#set_io pin_9 E1
-#set_io pin_10 G2
-#set_io pin_11 H1
-#set_io pin_12 J1
-#set_io pin_13 H2
-#set_io pin_14 H9
-#set_io pin_15 D9
-#set_io pin_16 D8
-#set_io pin_17 C9
-#set_io pin_18 A9
-#set_io pin_19 B8
-#set_io pin_20 A8
-#set_io pin_21 B7
-#set_io pin_22 A7
-#set_io pin_23 B6
-#set_io pin_24 A6
-#set_io pin_25 G1
-#set_io pin_26 J3
-#set_io pin_27 J4
-#set_io pin_28 H4
-set_io pin_29_miso H7
-set_io pin_30_cs F7
-set_io pin_31_mosi G6
-set_io pin_32_sck G7
-#set_io pin_33 J8
-#set_io pin_34 G9
-#set_io pin_35 J9
-#set_io pin_36 E8
-#set_io pin_37 J2
-set_io pin_led B3
-set_io pin_usbp B4
-set_io pin_usbn A4
-set_io pin_pu A3
-set_io pin_clk B2
+# RS232
+set_io -nowarn RX          6
+set_io -nowarn TX          9
 
+# LEDs and Button
+set_io -nowarn BTN_N      10
+set_io -nowarn LEDR_N     11
+set_io -nowarn pin_led    11
+set_io -nowarn LEDG_N     37
+
+# RGB LED Driver
+set_io -nowarn LED_RED_N  39
+set_io -nowarn LED_GRN_N  40
+set_io -nowarn LED_BLU_N  41
+
+# SPI Flash
+set_io -nowarn FLASH_SCK  15
+set_io -nowarn FLASH_SSB  16
+set_io -nowarn FLASH_IO0  14
+set_io -nowarn FLASH_IO1  17
+set_io -nowarn FLASH_IO2  12
+set_io -nowarn FLASH_IO3  13
+
+set_io -nowarn pin_32_sck 15
+set_io -nowarn pin_30_cs  16
+set_io -nowarn pin_31_mosi 14
+set_io -nowarn pin_29_miso 17
+
+# PMOD 1A
+set_io -nowarn P1A1        4
+set_io -nowarn P1A2        2
+set_io -nowarn P1A3       47
+set_io -nowarn P1A4       45
+set_io -nowarn P1A7        3
+set_io -nowarn P1A8       48
+set_io -nowarn P1A9       46
+set_io -nowarn P1A10      44
+
+# PMOD 1B
+set_io -nowarn P1B1       43
+set_io -nowarn P1B2       38
+set_io -nowarn P1B3       34
+set_io -nowarn P1B4       31
+set_io -nowarn P1B7       42
+set_io -nowarn P1B8       36
+set_io -nowarn P1B9       32
+set_io -nowarn P1B10      28
+
+# PMOD 2
+set_io -nowarn P2_1       27
+set_io -nowarn P2_2       25
+set_io -nowarn P2_3       21
+set_io -nowarn P2_4       19
+set_io -nowarn P2_7       26
+set_io -nowarn P2_8       23
+set_io -nowarn P2_9       20
+set_io -nowarn P2_10      18
+
+# LEDs and Buttons (PMOD 2)
+set_io -nowarn LED1       27
+set_io -nowarn LED2       25
+set_io -nowarn LED3       21
+set_io -nowarn BTN2       19
+set_io -nowarn LED5       26
+set_io -nowarn LED4       23
+set_io -nowarn BTN1       20
+set_io -nowarn BTN3       18
+
+# USB interface
+
+set_io -nowarn pin_usbp   43
+set_io -nowarn pin_usbn   42
+set_io -nowarn pin_pu     38

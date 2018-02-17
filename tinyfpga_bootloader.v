@@ -146,7 +146,8 @@ module tinyfpga_bootloader (
   wire [31:0] output_pin_values;
   wire [31:0] output_pin_enables;
 
-  assign boot = host_presence_timeout || boot_to_user_design;
+  //assign boot = host_presence_timeout || boot_to_user_design;
+  assign boot = boot_to_user_design;
 
   usb_serial_ctrl_ep ctrl_ep_inst (
     .clk(clk_48mhz),
