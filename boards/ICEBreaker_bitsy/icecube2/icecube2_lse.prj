@@ -41,7 +41,7 @@
 -ver "../../../common/usb_fs_tx_mux.v"
 -ver "../../../common/usb_serial_ctrl_ep.v"
 -ver "../../../common/usb_spi_bridge_ep.v"
--p "C:/Users/lvale/Documents/TinyFPGA/repos/TinyFPGA-Bootloader/boards/ICEBreaker_bitsy/icecube2"
+-p "/home/esdentem/projects/icestorm/TinyFPGA-Bootloader-git/boards/ICEBreaker_bitsy/icecube2"
 
 #set result format/file last
 -output_edif icecube2_Implmnt/icecube2.edf

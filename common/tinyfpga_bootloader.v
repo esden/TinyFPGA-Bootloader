@@ -35,7 +35,7 @@ module tinyfpga_bootloader (
   ////////////////////////////////////////////////////////////////////////////////
   reg [7:0] led_pwm = 0;
   reg [7:0] pwm_cnt = 0;
-  
+
   reg [5:0] ns_cnt = 0;
   wire ns_rst = (ns_cnt == 48);
   always @(posedge clk_48mhz) begin
@@ -133,7 +133,8 @@ module tinyfpga_bootloader (
 
   wire boot_to_user_design;
 
-  assign boot = host_presence_timeout || boot_to_user_design;
+  //assign boot = host_presence_timeout || boot_to_user_design;
+  assign boot = 0;
 
   usb_serial_ctrl_ep ctrl_ep_inst (
     .clk(clk_48mhz),

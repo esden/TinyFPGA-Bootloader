@@ -1,0 +1,26 @@
+# ##############################################################################
+
+# iCEcube PCF
+
+# Version:            2017.08.27940
+
+# File Generated:     May 28 2018 21:30:08
+
+# Family & Device:    iCE40UP5K
+
+# Package:            SG48
+
+# ##############################################################################
+
+###IOSet List 8
+set_io pin_29_miso 17 -io_std SB_LVCMOS
+set_io pin_30_cs 16 -io_std SB_LVCMOS
+set_io pin_32_sck 15 -io_std SB_LVCMOS
+set_io pin_31_mosi 14 -io_std SB_LVCMOS
+set_io pin_clk 35
+set_io pin_clk_mon 44
+set_io pin_led 11 -io_std SB_LVCMOS
+set_io pin_pu 38 -io_std SB_LVCMOS
+set_io pin_usbn 42 -io_std SB_LVCMOS
+set_io pin_usbp 43 -io_std SB_LVCMOS
+

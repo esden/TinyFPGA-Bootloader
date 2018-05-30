@@ -1,10 +1,10 @@
 [Project]
 ProjectVersion=2.0
-Version=Lattice Semiconductor Corporation iCEcube - Release: 2017.01.27914 - Build Date: Jan 12 2017 19:10:45
+Version=Lattice Semiconductor Corporation iCEcube - Release: 2017.08.27940 - Build Date: Sep 12 2017 08:41:24
 ProjectName=icecube2
 Vendor=SiliconBlue
 Synthesis=synplify
-ProjectVFiles=../bootloader.v,../../../common/edge_detect.v,../../../common/tinyfpga_bootloader.v,../../../common/usb_fs_in_arb.v,../../../common/usb_fs_in_pe.v,../../../common/usb_fs_out_arb.v,../../../common/usb_fs_out_pe.v,../../../common/usb_fs_pe.v,../../../common/usb_fs_rx.v,../../../common/usb_fs_tx.v,../../../common/usb_fs_tx_mux.v,../../../common/usb_serial_ctrl_ep.v,../../../common/usb_spi_bridge_ep.v
+ProjectVFiles=../bootloader.v=work,../../../common/edge_detect.v=work,../../../common/tinyfpga_bootloader.v=work,../../../common/usb_fs_in_arb.v=work,../../../common/usb_fs_in_pe.v=work,../../../common/usb_fs_out_arb.v=work,../../../common/usb_fs_out_pe.v=work,../../../common/usb_fs_pe.v=work,../../../common/usb_fs_rx.v=work,../../../common/usb_fs_tx.v=work,../../../common/usb_fs_tx_mux.v=work,../../../common/usb_serial_ctrl_ep.v=work,../../../common/usb_spi_bridge_ep.v=work
 ProjectCFiles=
 CurImplementation=icecube2_Implmnt
 Implementations=icecube2_Implmnt
@@ -24,8 +24,8 @@ DesignView=_rt
 DesignCell=bootloader
 SynthesisSDCFile=icecube2_Implmnt/icecube2.scf
 UserPinConstraintFile=
-UserSDCFile=icecube2_Implmnt/sbt/constraint/clock.sdc
-PhysicalConstraintFile=icecube2_Implmnt/sbt/constraint/bootloader_pcf_sbt.pcf
+UserSDCFile=
+PhysicalConstraintFile=bootloader_pcf_sbt.pcf
 BackendImplPathName=
 Devicevoltage=1.14
 DevicevoltagePerformance=+/-5%(datasheet default)

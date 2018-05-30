@@ -1,5 +1,6 @@
 module bootloader (
   input  pin_clk,
+  output pin_clk_mon,
 
   inout  pin_usbp,
   inout  pin_usbn,
@@ -52,7 +53,22 @@ module bootloader (
     .SCLK()
   );
 
-
+  // For clock debugging purposes only!
+  ////////////////////////////////////////
+  reg [3:0] clk_48mhz_16_div = 0;
+  
+  always @(posedge clk_48mhz) begin
+    if (reset) begin
+      clk_48mhz_16_div <= 0;
+    end else begin
+      clk_48mhz_16_div <= clk_48mhz_16_div + 1'b1;
+    end
+  end
+  // This assignement should divide the 48mhz pll output clock
+  // by 16 and result in a 3mhz clock output on the pin_clk_mon
+  //assign pin_clk_mon = (clk_48mhz_16_div < 8); 
+  assign pin_clk_mon = clk_48mhz;
+  /////////////////////////////////////////
 
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
