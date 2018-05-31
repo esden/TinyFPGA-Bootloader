@@ -1,5 +1,6 @@
 module bootloader (
   input  pin_clk,
+  input  pin_clk_48mhz,
   output pin_clk_mon,
 
   inout  pin_usbp,
@@ -21,7 +22,7 @@ module bootloader (
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
   wire clk_48mhz;
-
+  /*
   //SB_PLL40_CORE #(
   SB_PLL40_PAD #(
     .DIVR(4'b0000),
@@ -52,6 +53,9 @@ module bootloader (
     .SDO(),
     .SCLK()
   );
+  */
+
+  assign clk_48mhz = pin_clk_48mhz;
 
   // For clock debugging purposes only!
   ////////////////////////////////////////
